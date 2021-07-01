@@ -1,0 +1,12 @@
+no_comment: true
+package: res
+
+groups:
+  - path: res/drawables
+    class_name: AppImages
+    packaga: res
+    types: [ .jpg, .png, .webp ]
+  - path: res/svg
+    class_name: AppVectoriaImages
+    package: res
+    types: [.svg]
