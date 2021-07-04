@@ -1,17 +1,17 @@
 import 'package:OpenFoodFacts/res/app_colors.dart';
 import 'package:OpenFoodFacts/res/app_vectoria_images.dart';
+import 'package:OpenFoodFacts/single_product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'res/app_icons.dart';
 
-class ScanList extends StatelessWidget {
-  const ScanList({Key? key}) : super(key: key);
+class EmptyCart extends StatelessWidget {
+  const EmptyCart({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Color primaryColor = Theme.of(context).primaryColor;
-
     return Theme(
         data: Theme.of(context).copyWith(
           appBarTheme: AppBarTheme(
@@ -62,7 +62,12 @@ class ScanList extends StatelessWidget {
                   height: 30.0,
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => SingleProduct()),
+                      );
+                    },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 20.0,

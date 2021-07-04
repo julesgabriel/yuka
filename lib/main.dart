@@ -1,5 +1,5 @@
+import 'package:OpenFoodFacts/codebar_bloc.dart';
 import 'package:OpenFoodFacts/res/app_colors.dart';
-import 'package:OpenFoodFacts/single_plat.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         primaryColorDark: AppColors.blueDark,
         accentColor: AppColors.yellow,
       ),
-      home: SinglePlat(),
+      //home: EmptyCart(),
+      home: ScreenBarCode(),
     );
   }
 }
